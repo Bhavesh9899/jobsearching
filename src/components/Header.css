@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+
+
+
+
+.navbar {
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 700;
+    background-color: var(--secondary);
+}
+
+.navbar-toggler {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.nav-logo {
+    width: 9.5rem;
+}
+
+.nav-link {
+    border-bottom: .1rem solid transparent;
+    position: relative;
+}
+
+.nav-link::before {
+    content: '';
+    width: 0%;
+    height: .1rem;
+    background-color: var(--primary);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: .4s all;
+}
+
+.nav-link:hover {
+    color: var(--primary);
+}
+
+.nav-link:hover::before {
+    width: 100%;
+}
+
+.nav-link.active {
+    color: var(--primary) !important;
+}
+
+@media (max-width:768px) {
+    .navbar-toggler {
+        order: 1;
+    }
+
+    .navbar-brand {
+        order: 2;
+    }
+
+    .btn-container {
+        order: 3;
+    }
+
+    .navbar-collapse {
+        order: 4;
+    }
+
+    .nav-logo {
+        width: 7rem;
+    }
+}
+
+@media (min-width:768px) {
+    .container-fluid.container-fluid-navbar {
+        padding-left: 7vw !important;
+        padding-right: 7vw !important;
+    }
+}
